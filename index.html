@@ -7,11 +7,16 @@
         <meta name="description"
             content="Web-Store электроники: телефоны, ноутбуки, аксессуары по выгодным ценам.">
         <title>Web-Store электроники</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
 
         <header>
-            <h1>Web-Store электроники</h1>
+            <div style="display: flex; align-items: center;">
+                <img src="picters/logo.png" alt="Логотип Web-Store"
+                    style="max-width: 100px; margin-right: 20px;">
+                <h1>Web-Store электроники</h1>
+            </div>
             <nav>
                 <ul>
                     <li>Главная</li>
@@ -21,42 +26,54 @@
         </header>
 
         <main>
-            <section>
+            <section class="products-section">
                 <h2>Наши продукты</h2>
                 <p>В нашем магазине вы найдете лучшие модели телефонов,
                     ноутбуков и аксессуаров по выгодным ценам!</p>
 
                 <h3>Категории товаров:</h3>
-                <ul>
-                    <li>Мобильные телефоны</li>
-                    <li>Ноутбуки</li>
-                    <li>Аксессуары</li>
-                </ul>
+                <nav>
+                    <ul>
+                        <li>Мобильные телефоны</li>
+                        <li>Ноутбуки</li>
+                        <li>Аксессуары</li>
+                    </ul>
+                </nav>
             </section>
 
-            <section>
+            <section class="products">
                 <h2>Новинки</h2>
-                <article>
-                    <h3>Новый iPhone 15 Pro</h3>
-                    <p>Самая продвинутая модель iPhone на данный момент.
-                        <strong>Высокая производительность</strong> и лучшие
-                        камеры.</p>
-                    <p><del>Старая цена: 100 000 руб.</del> <ins>Новая
-                            цена:</ins> <strong>70 000 руб.</strong></p>
-                </article>
+                <div class="product-list">
+                    <article>
+                        <img src="picters/iphone15.jpg"
+                            alt="Новый iPhone 15 Pro"
+                            style="max-width: 50%; border-radius: 10px; margin: auto;">
+                        <h3>Новый iPhone 15 Pro</h3>
+                        <p>Самая продвинутая модель iPhone на данный момент.
+                            <strong>Высокая производительность</strong> и лучшие
+                            камеры.</p>
+                        <p><del>Старая цена: 100 000 руб.</del> <ins>Новая
+                                цена:</ins> <strong>70 000 руб.</strong></p>
+                    </article>
 
-                <article>
-                    <h3>Ноутбук MacBook Air M2</h3>
-                    <p>Легкий, тонкий и мощный ноутбук с процессором M2, который
-                        <em>идеально подходит</em> для работы и развлечений.</p>
-                    <p><del>Старая цена: 120 000 руб.</del> <ins>Новая
-                            цена:</ins> <strong>100 000 руб.</strong></p>
-                </article>
+                    <article>
+                        <img src="picters/macbookair.jpg"
+                            alt="Ноутбук MacBook Air M2"
+                            style="max-width: 100%; border-radius: 10px;">
+                        <h3>Ноутбук MacBook Air M2</h3>
+                        <p>Легкий, тонкий и мощный ноутбук с процессором M2,
+                            который <em>идеально подходит</em> для работы и
+                            развлечений.</p>
+                        <p><del>Старая цена: 120 000 руб.</del> <ins>Новая
+                                цена:</ins> <strong>100 000 руб.</strong></p>
+                    </article>
+                </div>
             </section>
 
             <section>
                 <h2>О нас</h2>
-                <p>С 2010 года на рынке. Помогли купить технику <em>больше 100 000 счастливым клиентам</em>.</p>
+                <p>С 2010 года на рынке. Помогли купить технику <em>больше 100
+                        000 счастливым клиентам</em>.</p>
             </section>
 
             <section>
@@ -70,35 +87,17 @@
         </main>
 
         <section>
-            <h2>Наш share-логотип</h2>
+            <h2>Just feel it</h2>
             <pre>
-        ***************
-        *  WEB-STORE  *
-        ***************
-        </pre>
-        </section>
+            <code>
+package main
 
-        <section>
-            <h2>Цитата и формула успеха</h2>
-            <blockquote>
-                "Успех наполовину зависит от качественной техники."
-            </blockquote>
-            <p>Формула успеха: <strong>успех</strong> = <em>техника</em> +
-                <em>работа</em><sup>2</sup> - <em>ошибки</em><sub>n</sub></p>
-        </section>
+import "fmt"
 
-        <section>
-            <h2>Пример кода</h2>
-            <pre>
-        <code>
-        func smile() {
-            if isAllGood {
-                smileAllDay()
-            } else {
-                buyTech()
-            }
-        }
-        </code>
+func main() {
+    fmt.Println("Hello, 世界")
+}
+            </code>
         </pre>
         </section>
 
