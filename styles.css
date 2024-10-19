@@ -184,6 +184,8 @@ aside {
     width: 150px;
     height: auto;
     border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
 .products-section {
