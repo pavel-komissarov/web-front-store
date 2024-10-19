@@ -280,17 +280,3 @@ aside {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
 }
-
-@media screen and (max-width: 480px) {
-    nav ul {
-        display: none;
-    }
-
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-    footer {
-        display: none;
-    }
-}
