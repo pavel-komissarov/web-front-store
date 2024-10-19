@@ -75,7 +75,7 @@ main section {
 }
 
 main h2 {
-    font-size: 3.5vw;
+    font-size: 2.5vw;
     margin-bottom: 10px;
 }
 
@@ -110,7 +110,7 @@ main p {
 
 .products article p {
     color: #d8d8d8;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
 }
 
 del {
