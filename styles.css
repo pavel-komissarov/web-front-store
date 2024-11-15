@@ -1,4 +1,4 @@
-/* Общие стили */
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -7,7 +7,7 @@ body {
     padding: 0;
 }
 
-/* Header */
+/* Header styles */
 .header {
     background-color: #222;
     color: #fff;
@@ -17,37 +17,42 @@ body {
     justify-content: space-between;
 }
 
+/* Logo in the header */
 .header__logo {
     margin-right: 20px;
     height: 50px;
 }
 
+/* Title in the header */
 .header__title {
     font-size: 2em;
     margin: 0;
 }
 
+/* Navigation bar styles */
 .header__nav {
     display: flex;
     align-items: center;
 }
 
+/* Navigation link styles */
 .header__nav-link {
     color: #fff;
     text-decoration: none;
     margin: 0 10px;
 }
 
+/* Navigation link hover effect */
 .header__nav-link:hover {
     color: #ff9900;
 }
 
-/* Main Content */
+/* Main content section styles */
 .main__section {
     padding: 20px;
 }
 
-/* Каталог товаров */
+/* Catalog section styles */
 .catalog {
     display: flex;
     flex-wrap: wrap;
@@ -56,7 +61,7 @@ body {
     padding: 20px;
 }
 
-/* Карточка товара */
+/* Catalog item card styles */
 .catalog__item {
     background-color: #ffffff;
     border-radius: 8px;
@@ -67,10 +72,12 @@ body {
     transition: transform 0.2s ease;
 }
 
+/* Catalog item hover effect */
 .catalog__item:hover {
     transform: translateY(-5px);
 }
 
+/* Catalog item image styles */
 .catalog__image {
     width: 100%;
     height: auto;
@@ -78,13 +85,14 @@ body {
     margin-bottom: 10px;
 }
 
-/* Текстовые стили */
+/* Catalog item title styles */
 .catalog__title {
     font-size: 1.2em;
     margin-bottom: 8px;
     color: #333;
 }
 
+/* Catalog item price styles */
 .catalog__price {
     font-size: 1.1em;
     color: #0a8f08;
@@ -92,13 +100,14 @@ body {
     margin: 5px 0;
 }
 
+/* Catalog item description styles */
 .catalog__description {
     font-size: 0.9em;
     color: #666;
     line-height: 1.4;
 }
 
-/* Таблица сравнения */
+/* Comparison table styles */
 .comparison-table {
     overflow-x: auto;
     display: grid;
@@ -109,6 +118,7 @@ body {
     text-align: center;
 }
 
+/* Comparison table header styles */
 .comparison-table__header {
     background-color: #222;
     color: #fff;
@@ -116,16 +126,18 @@ body {
     padding: 10px;
 }
 
+/* Comparison table cell styles */
 .comparison-table__cell {
     padding: 10px;
     border: 1px solid #ddd;
 }
 
+/* Alternate row background color in comparison table */
 .comparison-table__cell:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-/* Footer */
+/* Footer styles */
 .footer {
     background-color: #222;
     color: #fff;
@@ -134,7 +146,7 @@ body {
     font-size: 0.9em;
 }
 
-/* Адаптивность */
+/* Responsive styles */
 @media (max-width: 600px) {
     .catalog {
         flex-direction: column;
