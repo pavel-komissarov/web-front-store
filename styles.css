@@ -1,284 +1,148 @@
+/* Общие стили */
 body {
-    background-color: #000000;
-    color: #ffffff;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
     margin: 0;
     padding: 0;
 }
 
-h1,
-h2,
-h3 {
-    color: #00ff99;
-    font-weight: bold;
+/* Header */
+.header {
+    background-color: #222;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-p {
-    font-size: 1.5vw;
-    color: #d8d8d8;
+.header__logo {
+    margin-right: 20px;
+    height: 50px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+.header__title {
+    font-size: 2em;
+    margin: 0;
 }
 
-header .nav-link {
-    color: #00ff99;
-    margin: 11px 0;
-    font-size: 2.5vw;
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav-link {
+    color: #fff;
     text-decoration: none;
+    margin: 0 10px;
 }
 
-header .nav-link:hover {
-    color: #ffffff;
+.header__nav-link:hover {
+    color: #ff9900;
 }
 
-li {
-    color: #00ff99;
-    margin: 10px 0;
-    font-size: 2.5vw;
+/* Main Content */
+.main__section {
+    padding: 20px;
 }
 
-header {
+/* Каталог товаров */
+.catalog {
     display: flex;
-    text-align: center;
-    padding: 10px;
-    background-color: #000000;
-    border-bottom: 1px solid #00ff99;
-    flex-direction: column;
-    align-items: center;
-    font-size: 2.5vw;
-}
-
-header div {
-    display: flex;
-    align-items: center;
-}
-
-header h1 {
-    font-size: 5vw;
-    color: #00ff99;
-}
-
-nav ul {
-    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    gap: 1.5vw;
-    font-size: 2.5vw;
+    padding: 20px;
 }
 
-nav ul li {
-    cursor: pointer;
+/* Карточка товара */
+.catalog__item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    max-width: 220px;
+    text-align: center;
+    transition: transform 0.2s ease;
 }
 
-nav ul li:hover {
-    color: #ffffff;
+.catalog__item:hover {
+    transform: translateY(-5px);
 }
 
-main {
-    padding: 10px;
-    background-color: #0a0a0a;
-}
-
-main section {
-    margin-bottom: 40px;
-}
-
-main h2 {
-    font-size: 2.5vw;
+.catalog__image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
     margin-bottom: 10px;
 }
 
-main h3 {
-    font-size: 2.5vw;
-    margin-bottom: 5px;
+/* Текстовые стили */
+.catalog__title {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #333;
 }
 
-main p {
-    margin-bottom: 2px;
-    font-size: 1.5vw;
+.catalog__price {
+    font-size: 1.1em;
+    color: #0a8f08;
+    font-weight: bold;
+    margin: 5px 0;
 }
 
-.product-list {
-    display: flex;
-    justify-content: space-between;
-    gap: 1.5vw;
+.catalog__description {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.4;
 }
 
-.products article {
-    flex: 1;
-    border: 1px solid #00ff99;
-    padding: 16px;
-    border-radius: 10px;
-    background-color: #0a0a0a;
-}
-
-.products article h3 {
-    margin-top: 0;
-    font-size: 2.5vw;
-}
-
-.products article p {
-    color: #d8d8d8;
-    font-size: 1.2vw;
-}
-
-del {
-    color: #ff4d4d;
-    font-size: 1.5vw;
-}
-
-ins {
-    color: #00ff99;
-    text-decoration: none;
-    font-size: 1.5vw;
-}
-
-article {
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid #00ff99;
-    border-radius: 10px;
-    background-color: #0a0a0a;
-    box-shadow: 0 4px 15px rgba(0, 255, 153, 0.4);
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #000000;
-    border-top: 1px solid #00ff99;
-    font-size: 1.5vw;
-}
-
-pre {
-    background-color: #0a0a0a;
-    color: #ffffff;
-    padding: 20px;
-    border: 1px solid #00ff99;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 255, 153, 0.4);
-    font-size: 1.5vw;
-}
-
-blockquote {
-    font-size: 2.5vw;
-    font-style: italic;
-    color: #00ff99;
-    border-left: 4px solid #00ff99;
-    padding-left: 10px;
-    margin-left: 20px;
-}
-
-aside {
-    border: 1px solid #00ff99;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #0a0a0a;
-    box-shadow: 0 4px 15px rgba(0, 255, 153, 0.4);
-    font-size: 1.5vw;
-}
-
-.product-image {
-    width: 150px;
-    height: auto;
-    border-radius: 10px;
+/* Таблица сравнения */
+.comparison-table {
+    overflow-x: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-}
-
-.products-section {
-    text-align: center;
-}
-
-.products-section p {
-    font-size: 2vw;
-}
-
-.products-section h2,
-.products-section h3 {
-    font-size: 3.5vw;
-}
-
-.gallery {
-    text-align: center;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.gallery-item {
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.product-table {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin: 20px 0;
-    border: 1px solid #00ff99;
-    border-radius: 10px;
-}
-
-.table-header {
-    color: #cccccc;
+.comparison-table__header {
+    background-color: #222;
+    color: #fff;
     font-weight: bold;
     padding: 10px;
-    border-radius: 10px 10px 0 0;
-    display: contents;
-    font-size: 1.5vw;
 }
 
-.table-header div {
-    text-align: center;
-}
-
-.table-row {
-    display: contents;
-}
-
-.table-row:nth-child(odd) {
-    background-color: #a3a3a3;
-}
-
-.table-row:nth-child(even) {
-    color: #00ff99;
-}
-
-.table-row div {
+.comparison-table__cell {
     padding: 10px;
-    text-align: center;
+    border: 1px solid #ddd;
 }
 
-@media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 4.5vw;
-    }
+.comparison-table__cell:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
-    nav ul {
+/* Footer */
+.footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .catalog {
         flex-direction: column;
+        align-items: center;
     }
 
-    .product-list {
-        flex-direction: column;
-    }
-
-    .product-list article {
-        margin: 0 0 20px 0;
-    }
-
-    footer {
-        font-size: 2vw;
-    }
-
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    .catalog__item {
+        max-width: 90%;
+        margin-bottom: 20px;
     }
 }

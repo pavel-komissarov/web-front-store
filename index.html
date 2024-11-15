@@ -2,136 +2,129 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <meta name="keywords"
-            content="электроника, телефоны, ноутбуки, интернет-магазин">
-        <meta name="description"
-            content="Web-Store электроники: телефоны, ноутбуки, аксессуары по выгодным ценам.">
-        <title>Web-Store электроники</title>
+        <meta name="description" content="Web-Store электроники">
+        <title>Web-Store</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
 
-        <header>
-            <div style="display: flex; align-items: center;">
-                <img src="picters/logo.png" alt="Логотип Web-Store"
-                    style="max-width: 100px; margin-right: 20px;">
-                <h1>Web-Store электроники</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#" class="nav-link">Главная</a></li>
-                    <li><a href="#" class="nav-link">Каталог</a></li>
-                </ul>
+        <!-- Header -->
+        <header class="header">
+            <img src="picters\logo.png" alt="Web-Store Logo" class="header__logo">
+            <h1 class="header__title">Web-Store электроники</h1>
+            <nav class="header__nav">
+                <a href="#" class="header__nav-link">Главная</a>
+                <a href="#catalog" class="header__nav-link">Каталог</a>
+                <a href="#gallery" class="header__nav-link">Галерея</a>
+                <a href="#contacts" class="header__nav-link">Контакты</a>
             </nav>
         </header>
 
-        <main>
-            <section class="products-section">
-                <h2>Наши продукты</h2>
-                <p>В нашем магазине вы найдете лучшие модели телефонов,
-                    ноутбуков и аксессуаров по выгодным ценам!</p>
-                <h3>Категории товаров:</h3>
-                <nav>
-                    <ul>
-                        <li>Мобильные телефоны</li>
-                        <li>Ноутбуки</li>
-                        <li>Аксессуары</li>
-                    </ul>
-                </nav>
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Intro Section -->
+            <section class="main__section">
+                <h2>Добро пожаловать в Web-Store!</h2>
+                <p>Мы предлагаем лучшие товары по выгодным ценам. Ознакомьтесь с
+                    нашим каталогом!</p>
+                <p>Наш интернет-магазин предоставляет широкий ассортимент
+                    продукции от ведущих мировых брендов. Мы гарантируем высокое
+                    качество товаров и отличный сервис. Наши специалисты всегда
+                    готовы помочь вам с выбором и ответить на все ваши
+                    вопросы.</p>
+                <p>Подпишитесь на нашу рассылку, чтобы первыми узнавать о
+                    новинках и специальных предложениях. Приятных покупок!</p>
             </section>
 
-            <section class="products">
-                <h2>Новинки</h2>
-                <div class="product-list">
-                    <article>
-                        <img src="picters/iphone15.jpg"
-                            alt="Новый iPhone 15 Pro"
-                            style="max-width: 50%; border-radius: 10px;">
-                        <h3>Новый iPhone 15 Pro</h3>
-                        <p>Самая продвинутая модель iPhone на данный момент.
-                            <strong>Высокая производительность</strong> и лучшие
-                            камеры.</p>
-                        <p><del>Старая цена: 100 000 руб.</del> <ins>Новая
-                                цена:</ins> <strong>70 000 руб.</strong></p>
-                    </article>
-                    <article>
-                        <img src="picters/macbookair.jpg"
-                            alt="Ноутбук MacBook Air M2"
-                            style="max-width: 100%; border-radius: 10px;">
-                        <h3>Ноутбук MacBook Air M2</h3>
-                        <p>Легкий, тонкий и мощный ноутбук с процессором M2,
-                            который <em>идеально подходит</em> для работы и
-                            развлечений.</p>
-                        <p><del>Старая цена: 120 000 руб.</del> <ins>Новая
-                                цена:</ins> <strong>100 000 руб.</strong></p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="gallery">
-                <h2>Галерея</h2>
-                <div class="gallery-grid">
-                    <img src="picters/iphone15.jpg" alt="iPhone 15"
-                        class="gallery-item">
-                    <img src="picters/macbookair.jpg" alt="MacBook Air"
-                        class="gallery-item">
-                </div>
-            </section>
-
-            <section>
-                <h2>О нас</h2>
-                <p>С 2010 года на рынке. Помогли купить технику <em>больше 100
-                        000 счастливым клиентам</em>.</p>
-            </section>
-
-            <section>
-                <h2>Полезная информация</h2>
-                <aside>
-                    <h3>Советы по выбору техники</h3>
-                    <p>Выбирайте технику, исходя из <strong>ваших</strong> нужд
-                        и задач. Ознакомьтесь с характеристиками и отзывами.</p>
-                </aside>
-            </section>
-
-            <section>
-                <h2>Таблица продуктов</h2>
-                <div class="product-table">
-                    <div class="table-header">
-                        <div>Название</div>
-                        <div>Цена</div>
-                        <div>Категория</div>
+            <!-- Catalog Section -->
+            <section id="catalog" class="main__section">
+                <h2>Каталог товаров</h2>
+                <div class="catalog">
+                    <div class="catalog__item">
+                        <img src="picters\mac-download.jpg" alt="MacBook Pro 14"
+                            class="catalog__image">
+                        <h3 class="catalog__title">MacBook Pro 14</h3>
+                        <p class="catalog__price">Цена: 150 000 руб.</p>
+                        <p class="catalog__description">Мощный ноутбук с чипом
+                            M2 Pro, Retina-дисплеем и длительным временем работы
+                            от батареи.</p>
                     </div>
-                    <div class="table-row">
-                        <div>iPhone 15 Pro</div>
-                        <div>70 000 руб.</div>
-                        <div>Мобильные телефоны</div>
+                    <div class="catalog__item">
+                        <img src="picters\dell-download.jpg" alt="Dell XPS 13"
+                            class="catalog__image">
+                        <h3 class="catalog__title">Dell XPS 13</h3>
+                        <p class="catalog__price">Цена: 120 000 руб.</p>
+                        <p class="catalog__description">Компактный ноутбук с
+                            Intel Core i7, безрамочным экраном и стильным
+                            дизайном.</p>
                     </div>
-                    <div class="table-row">
-                        <div>MacBook Air M2</div>
-                        <div>100 000 руб.</div>
-                        <div>Ноутбуки</div>
+                    <div class="catalog__item">
+                        <img src="picters\hp-download.jpg" alt="HP Omen 16"
+                            class="catalog__image">
+                        <h3 class="catalog__title">HP Omen 16</h3>
+                        <p class="catalog__price">Цена: 110 000 руб.</p>
+                        <p class="catalog__description">Игровой ноутбук с AMD
+                            Ryzen 7, мощной видеокартой и ярким дисплеем 16,1
+                            дюйма.</p>
+                    </div>
+                    <div class="catalog__item">
+                        <img src="picters\rog-download.jpg"
+                            alt="ASUS ROG Zephyrus G14" class="catalog__image">
+                        <h3 class="catalog__title">ASUS ROG Zephyrus G14</h3>
+                        <p class="catalog__price">Цена: 130 000 руб.</p>
+                        <p class="catalog__description">Компактный игровой
+                            ноутбук с AMD Ryzen 9 и экраном с высокой частотой
+                            обновления.</p>
                     </div>
                 </div>
             </section>
 
-            <section>
-                <h2>Just feel it )</h2>
-                <pre>
-                    <code>
-    package main
-    
-    import "fmt"
-    
-    func main() {
-        fmt.Println("Hello, 世界")
-    }
-                    </code>
-                </pre>
+            <!-- Comparison Section -->
+            <section class="main__section">
+                <h2>Сравнение характеристик</h2>
+                <div class="comparison-table-container">
+                    <div class="comparison-table">
+                        <div class="comparison-table__header">Модель</div>
+                        <div class="comparison-table__header">Цена</div>
+                        <div class="comparison-table__header">Диагональ</div>
+                        <div class="comparison-table__header">Процессор</div>
+
+                        <div class="comparison-table__cell">MacBook Pro 14</div>
+                        <div class="comparison-table__cell">150 000 руб.</div>
+                        <div class="comparison-table__cell">14.2"</div>
+                        <div class="comparison-table__cell">M2 Pro</div>
+
+                        <div class="comparison-table__cell">Dell XPS 13</div>
+                        <div class="comparison-table__cell">120 000 руб.</div>
+                        <div class="comparison-table__cell">13.4"</div>
+                        <div class="comparison-table__cell">Intel Core i7</div>
+
+                        <div class="comparison-table__cell">HP Omen 16</div>
+                        <div class="comparison-table__cell">110 000 руб.</div>
+                        <div class="comparison-table__cell">16.1"</div>
+                        <div class="comparison-table__cell">AMD Ryzen 7</div>
+
+                        <div class="comparison-table__cell">ASUS ROG Zephyrus
+                            G14</div>
+                        <div class="comparison-table__cell">130 000 руб.</div>
+                        <div class="comparison-table__cell">14.0"</div>
+                        <div class="comparison-table__cell">AMD Ryzen 9</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contacts" class="main__section">
+                <h2>Контакты</h2>
+                <p>Свяжитесь с нами: <a
+                        href="mailto:support@webstore.com">support@webstore.com</a></p>
+                <p>Телефон: +7 123 456 7890</p>
             </section>
         </main>
 
-        <footer>
-            <p>&copy; 2024 Web-Store электроники. Все права защищены.</p>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Web-Store. Все права защищены.</p>
         </footer>
 
     </body>
