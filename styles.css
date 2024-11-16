@@ -15,6 +15,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 /* Logo in the header */
@@ -33,6 +34,7 @@ body {
 .header__nav {
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 /* Navigation link styles */
@@ -191,9 +193,23 @@ body {
         margin-bottom: 20px;
     }
 
-    .header__nav {
+    .header {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .header__logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .header__title {
+        font-size: 1.5em;
+    }
+
+    .header__nav {
+        width: 100%;
+        justify-content: space-around;
     }
 
     .header__nav-link {
