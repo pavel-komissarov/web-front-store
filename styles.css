@@ -51,7 +51,6 @@ body {
 .main__section {
     padding: 20px;
     display: flex;
-    justify-content: center; /* Center the section content horizontally */
 }
 
 /* Catalog section styles */
@@ -160,8 +159,8 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
-    justify-content: center; /* Center the gallery */
-    justify-items: center; /* Center items within the gallery */
+    justify-content: center;
+    justify-items: center;
 }
 
 /* Gallery item styles */
