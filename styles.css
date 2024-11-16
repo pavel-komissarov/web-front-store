@@ -11,7 +11,7 @@ body {
 .header {
     background-color: #222;
     color: #fff;
-    padding: 15px;
+    padding: 1px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,7 +50,6 @@ body {
 /* Main content section styles */
 .main__section {
     padding: 20px;
-    display: flex;
 }
 
 /* Catalog section styles */
@@ -159,8 +158,6 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
-    justify-content: center;
-    justify-items: center;
 }
 
 /* Gallery item styles */
