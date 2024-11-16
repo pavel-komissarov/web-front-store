@@ -26,16 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Iterate over each navigation link
     navLinks.forEach(link => {
-        // Event listener for mouseover event
-        link.addEventListener('mouseover', function () {
-            this.style.color = '#ff9900';
-        });
-
-        // Event listener for mouseout event
-        link.addEventListener('mouseout', function () {
-            this.style.color = '';
-        });
-
         // Check if the link's href matches the current location
         if (link.getAttribute('href') === currentLocation) {
             // Add the active class to the link
