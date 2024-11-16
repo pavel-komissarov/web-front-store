@@ -182,7 +182,7 @@ body {
 }
 
 /* Responsive styles */
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
     .catalog {
         flex-direction: column;
         align-items: center;
@@ -204,15 +204,29 @@ body {
     }
 
     .header__title {
-        font-size: 1.5em;
+        font-size: 2.5em;
     }
 
     .header__nav {
         width: 100%;
+        font-size: 2.5em;
         justify-content: space-around;
     }
 
     .header__nav-link {
         margin: 5px 0;
+    }
+
+    .main__section {
+        padding: 10px;
+    }
+
+    #contacts h2 {
+        font-size: 1.5em;
+    }
+
+    #contacts p {
+        font-size: 1em;
+        line-height: 1.5;
     }
 }
