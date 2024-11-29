@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Форма для отзывов">
+        <title>Отзывы</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts\review.js" defer></script>
+    </head>
+    <body>
+        <header class="header">
+            <img src="images/logo.png" alt="Web-Store Logo"
+                class="header__logo">
+            <h1 class="header__title">Отзывы</h1>
+            <nav class="header__nav">
+                <a href="index.html" class="header__nav-link">Главная</a>
+                <a href="catalog.html" class="header__nav-link">Каталог</a>
+                <a href="gallery.html" class="header__nav-link">Галерея</a>
+                <a href="contacts.html" class="header__nav-link">Контакты</a>
+                <a href="reviews.html"
+                    class="header__nav-link active">Отзывы</a>
+            </nav>
+        </header>
+
+        <main class="main">
+            <section class="main__section">
+                <h2>Оставьте отзыв</h2>
+                <form id="review-form" class="review-form">
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" id="name" name="name"
+                        class="review-form__input" required
+                        placeholder="Введите имя">
+
+                    <label for="rating">Оценка:</label>
+                    <select id="rating" name="rating"
+                        class="review-form__select">
+                        <option value="5">5 - Отлично</option>
+                        <option value="4">4 - Хорошо</option>
+                        <option value="3">3 - Неплохо</option>
+                        <option value="2">2 - Плохо</option>
+                        <option value="1">1 - Ужасно</option>
+                    </select>
+
+                    <label for="comment">Ваш отзыв:</label>
+                    <textarea id="comment" name="comment"
+                        class="review-form__textarea" required
+                        placeholder="Напишите отзыв"></textarea>
+
+                    <button type="submit"
+                        class="review-form__button">Отправить</button>
+                    <button type="button" id="clear-reviews"
+                        class="review-form__button">Очистить все отзывы</button>
+                </form>
+            </section>
+
+            <section class="main__section">
+                <h2>Отзывы</h2>
+                <div id="reviews-container"></div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Web-Store. Все права защищены.</p>
+        </footer>
+    </body>
+</html>
