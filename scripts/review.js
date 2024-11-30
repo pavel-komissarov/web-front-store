@@ -3,13 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const reviewsContainer = document.getElementById("reviews-container");
     const clearReviewsBtn = document.getElementById("clear-reviews");
 
-    // Загрузка отзывов из localStorage
     const loadReviews = () => {
         console.log("Загрузка отзывов...");
         const savedReviews = JSON.parse(localStorage.getItem("reviews")) || [];
         console.log("Отзывы из localStorage:", savedReviews);
 
-        reviewsContainer.innerHTML = ""; // Очищаем контейнер
+        reviewsContainer.innerHTML = "";
 
         if (savedReviews.length > 0) {
             savedReviews.forEach((review) => addReviewToDOM(review));
@@ -18,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Сохранение нового отзыва в localStorage
     const saveReview = (review) => {
         const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
         reviews.push(review);
@@ -26,34 +24,40 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Сохраненный отзыв:", review);
     };
 
-    // Добавление отзыва на страницу
     const addReviewToDOM = ({ name, rating, comment }) => {
-        // Удаляем текст "Отзывов пока нет", если он есть
         const placeholder = document.querySelector("#reviews-container p");
         if (placeholder && placeholder.textContent.includes("Отзывов пока нет")) {
             placeholder.remove();
         }
-
-        // Создаём карточку отзыва
-        const reviewCard = document.createElement("div");
-        reviewCard.className = "review-card";
-
-        reviewCard.innerHTML = `
-            <h3 class="review-card__name">${name}</h3>
-            <p class="review-card__rating">Оценка: ${rating}/5</p>
-            <p class="review-card__comment">${comment}</p>
-        `;
-
-        // Добавляем карточку в контейнер
+    
+        const reviewCard = document.createElement('div');
+        reviewCard.className = 'review-card';
+    
+        const nameElement = document.createElement('h3');
+        nameElement.className = 'review-card__name';
+        nameElement.textContent = name;
+    
+        const ratingElement = document.createElement('p');
+        ratingElement.className = 'review-card__rating';
+        ratingElement.textContent = `Оценка: ${rating}/5`;
+    
+        const commentElement = document.createElement('p');
+        commentElement.className = 'review-card__comment';
+        commentElement.textContent = comment;
+    
+        reviewCard.appendChild(nameElement);
+        reviewCard.appendChild(ratingElement);
+        reviewCard.appendChild(commentElement);
+    
         reviewsContainer.appendChild(reviewCard);
     };
 
-    // Обработчик отправки формы
+
     form.addEventListener("submit", (event) => {
-        event.preventDefault(); // Останавливаем стандартное поведение
+        event.preventDefault();
 
         if (!document.querySelector(".review-card")) {
-            reviewsContainer.innerHTML = ""; // Очищаем контейнер при первом отзыве
+            reviewsContainer.innerHTML = "";
         }
 
         const name = document.getElementById("name").value.trim();
@@ -62,10 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (name && comment) {
             const review = { name, rating, comment };
-            addReviewToDOM(review); // Добавляем отзыв на страницу
-            saveReview(review); // Сохраняем в localStorage
+            addReviewToDOM(review);
+            saveReview(review);
 
-            form.reset(); // Очищаем форму
+            form.reset();
             // reviewsContainer.innerHTML = ``;
             alert("Ваш отзыв добавлен!");
         } else {
@@ -73,7 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Очистка всех отзывов
     clearReviewsBtn.addEventListener("click", () => {
         if (confirm("Вы уверены, что хотите удалить все отзывы?")) {
             localStorage.removeItem("reviews");
@@ -82,6 +85,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Загрузка отзывов при открытии страницы
     loadReviews();
 });
