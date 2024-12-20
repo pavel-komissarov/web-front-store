@@ -70,8 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
             saveReview(review);
 
             form.reset();
-            // reviewsContainer.innerHTML = ``;
-            alert("Ваш отзыв добавлен!");
         } else {
             alert("Пожалуйста, заполните все поля.");
         }
